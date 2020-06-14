@@ -197,6 +197,12 @@ class Framework
   attr_reader   :analyze
 
   #
+  # The framework instance's dependency
+  #
+  #
+  attr_accessor   :has_mingw
+
+  #
   # The framework instance's data service proxy
   #
   # @return [Metasploit::Framework::DataService::DataProxy]
@@ -387,6 +393,10 @@ class FrameworkEventSubscriber
 
     if framework.db.active
       ws = framework.db.find_workspace(session.workspace)
+      opts.each_key do |attr|
+        opts[attr].force_encoding('UTF-8') if opts[attr].is_a?(String)
+      end
+
       event = {
         :workspace => ws,
         :username  => session.username,

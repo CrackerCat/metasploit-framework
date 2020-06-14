@@ -17,7 +17,7 @@ TLV_TYPE_INHERIT            = TLV_META_TYPE_BOOL    |  601
 TLV_TYPE_PROCESS_HANDLE     = TLV_META_TYPE_QWORD   |  630
 TLV_TYPE_THREAD_HANDLE      = TLV_META_TYPE_QWORD   |  631
 TLV_TYPE_PRIVILEGE          = TLV_META_TYPE_STRING  |  632
- 
+
 ##
 #
 # Fs
@@ -211,6 +211,7 @@ TLV_TYPE_KEYS_SEND                         = TLV_META_TYPE_STRING | 3014
 TLV_TYPE_MOUSE_ACTION                      = TLV_META_TYPE_UINT   | 3015
 TLV_TYPE_MOUSE_X                           = TLV_META_TYPE_UINT   | 3016
 TLV_TYPE_MOUSE_Y                           = TLV_META_TYPE_UINT   | 3017
+TLV_TYPE_KEYEVENT_SEND                     = TLV_META_TYPE_RAW    | 3018
 
 ##
 #
